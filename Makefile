@@ -10,18 +10,18 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = So_long
+NAME = so_long
 
 LIBFT = ./libft/libft.a
 MLX = ./mlx/libmlx_Linux.a
 
 CC = gcc
-CFLAGS 	= -Wall -Werror -Wextra -fsanitize=address -g3
-MINILIBX_FLAGS	= -lmlx -lXext -lX11
+CFLAGS 	= -Wall -Werror -Wextra
+MINILIBX_FLAGS	= -L mlx/ -lmlx -lXext -lX11
 RM = rm -f
 
 SRC = ./src/so_long.c ./src/ft_keypress.c ./src/ft_load_map.c ./src/ft_error.c \
-./src/ft_draw_map.c ./src/ft_victory.c ./src/ft_check_map.c
+./src/ft_draw_map.c ./src/ft_victory.c ./src/ft_check_map.c ./src/ft_utils.c
 OBJ = $(SRC:.c=.o)
 
 BONUSSRC =
